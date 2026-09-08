@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DepthBenchCAD released generation record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_type",
+    "benchmark",
+    "system_id",
+    "model",
+    "environment",
+    "environment_name",
+    "split",
+    "task_family",
+    "template_id",
+    "generation_id",
+    "candidate_program_available",
+    "audited_state_count",
+    "failure_count",
+    "failure_rate",
+    "failure_count_by_edit_type",
+    "failed_state_ids"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "record_type": {
+      "const": "generation_record"
+    },
+    "system_id": {
+      "enum": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ]
+    },
+    "environment": {
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "split": {
+      "enum": [
+        "calibration",
+        "test"
+      ]
+    },
+    "generation_id": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "candidate_program_available": {
+      "const": false
+    },
+    "candidate_program": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "candidate_program_sha256": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "audited_state_count": {
+      "const": 16
+    },
+    "failure_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 16
+    },
+    "failure_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "benchmark": {
+      "const": "DepthBenchCAD"
+    },
+    "environment_name": {
+      "enum": [
+        "DepthBenchCAD-A",
+        "DepthBenchCAD-B"
+      ]
+    }
+  }
+}

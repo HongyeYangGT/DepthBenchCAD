@@ -1,0 +1,6 @@
+system,pooled_q,pooled_g,pooled_k,pooled_J,system_q,system_g,system_k,system_J,stratified_q,stratified_g,stratified_k,stratified_J
+S1,48,2,7,0.1266,48,3,4,0.1288,48,2,8,0.1103
+S2,46,2,7,0.2645,39,3,5,0.3492,44,3,4,0.3
+S3,32,2,7,0.5607,30,2,8,0.5471,32,2,7,0.5818
+S4,21,2,7,0.8427,14,3,7,0.8738,23,2,5,1.1128
+S5,12,2,7,1.5771,22,1,11,1.0749,22,1,11,1.0882

@@ -1,0 +1,21 @@
+environment,environment_name,split,system_id,model,templates,generations,audited_states,failures,risk
+A,DepthBenchCAD-A,calibration,S1,GPT-4.1 mini,24,120,1920,183,0.0953125
+A,DepthBenchCAD-A,calibration,S2,GPT-5.5,24,120,1920,413,0.21510416666666668
+A,DepthBenchCAD-A,calibration,S3,Gemini 2.5 Flash,24,120,1920,612,0.31875
+A,DepthBenchCAD-A,calibration,S4,Gemini 3.1 Pro,24,120,1920,743,0.38697916666666665
+A,DepthBenchCAD-A,calibration,S5,Claude Sonnet 4.6,24,120,1920,855,0.4453125
+A,DepthBenchCAD-A,test,S1,GPT-4.1 mini,48,240,3840,368,0.09583333333333334
+A,DepthBenchCAD-A,test,S2,GPT-5.5,48,240,3840,826,0.21510416666666668
+A,DepthBenchCAD-A,test,S3,Gemini 2.5 Flash,48,240,3840,1224,0.31875
+A,DepthBenchCAD-A,test,S4,Gemini 3.1 Pro,48,240,3840,1482,0.3859375
+A,DepthBenchCAD-A,test,S5,Claude Sonnet 4.6,48,240,3840,1714,0.44635416666666666
+B,DepthBenchCAD-B,calibration,S1,GPT-4.1 mini,12,48,768,16,0.020833333333333332
+B,DepthBenchCAD-B,calibration,S2,GPT-5.5,12,48,768,31,0.040364583333333336
+B,DepthBenchCAD-B,calibration,S3,Gemini 2.5 Flash,12,48,768,67,0.08723958333333333
+B,DepthBenchCAD-B,calibration,S4,Gemini 3.1 Pro,12,48,768,80,0.10416666666666667
+B,DepthBenchCAD-B,calibration,S5,Claude Sonnet 4.6,12,48,768,138,0.1796875
+B,DepthBenchCAD-B,test,S1,GPT-4.1 mini,36,144,2304,65,0.028211805555555556
+B,DepthBenchCAD-B,test,S2,GPT-5.5,36,144,2304,111,0.048177083333333336
+B,DepthBenchCAD-B,test,S3,Gemini 2.5 Flash,36,144,2304,184,0.0798611111111111
+B,DepthBenchCAD-B,test,S4,Gemini 3.1 Pro,36,144,2304,280,0.12152777777777778
+B,DepthBenchCAD-B,test,S5,Claude Sonnet 4.6,36,144,2304,413,0.1792534722222222

@@ -1,0 +1,6 @@
+method,512,1024,2048
+fixed_k8,95.8,97.9,99.7
+fixed_k9,95.8,97.7,99.6
+fixed_k10,95.0,98.0,99.7
+paired_system,95.2,98.2,99.6
+paired_system_stratified,95.9,98.4,99.6

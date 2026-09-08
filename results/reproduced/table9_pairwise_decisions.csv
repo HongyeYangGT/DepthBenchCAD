@@ -1,0 +1,6 @@
+method,correct_rate_C512,tie_rate_C512,correct_rate_C1024,tie_rate_C1024,correct_rate_C2048,tie_rate_C2048
+fixed_k10,1.0,0.0,1.0,0.0,1.0,0.0
+fixed_k8,1.0,0.0,1.0,0.0,1.0,0.0
+fixed_k9,0.9975,0.0025,1.0,0.0,1.0,0.0
+paired_system,1.0,0.0,1.0,0.0,1.0,0.0
+paired_system_stratified,1.0,0.0,1.0,0.0,1.0,0.0

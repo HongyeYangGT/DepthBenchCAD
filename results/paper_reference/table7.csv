@@ -1,0 +1,11 @@
+method,mean_J,mean_k,relative_to_best_percent
+fixed_k4,0.974,4.0,26.8
+fixed_k8,0.828,8.0,7.9
+fixed_k9,0.782,9.0,1.8
+fixed_k10,0.768,10.0,0.0
+fixed_k12,0.833,12.0,8.5
+fixed_k16,0.855,16.0,11.3
+cross_system_pooled,0.831,7.0,8.2
+leave_one_system_out,0.786,11.6,2.3
+full_system_calibration,0.807,10.2,5.0
+small_calibration_stratified,0.831,10.6,8.2

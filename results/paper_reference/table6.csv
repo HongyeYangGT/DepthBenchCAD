@@ -1,0 +1,6 @@
+system,random_robust_coverage_percent,random_regret_median,random_regret_p90,leave_family_out_robust_coverage_percent,leave_family_out_regret_median,leave_family_out_regret_p90
+S1,45.0,1.059,1.444,25.0,1.286,1.709
+S2,65.0,1.028,1.374,12.5,1.39,1.608
+S3,62.5,1.042,1.161,75.0,1.0,1.215
+S4,57.5,1.038,1.347,37.5,1.083,1.21
+S5,72.5,1.033,1.229,62.5,1.029,1.471

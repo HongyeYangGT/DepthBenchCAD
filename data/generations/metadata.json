@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "release_role": "canonical_generation_records",
+  "generation_records": 2760,
+  "environment_counts": {
+    "A": 1800,
+    "B": 960
+  },
+  "candidate_program_release": "candidate source text is not included in this public package",
+  "state_linkage": "each generation summarizes exactly 16 frozen audit states in data/records/depthbenchcad_A_audits.jsonl or data/records/depthbenchcad_B_audits.jsonl",
+  "benchmark": "DepthBenchCAD",
+  "environment_names": {
+    "A": "DepthBenchCAD-A",
+    "B": "DepthBenchCAD-B"
+  }
+}

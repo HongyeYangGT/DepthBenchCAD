@@ -1,0 +1,148 @@
+{
+  "benchmark": {
+    "name": "DepthBenchCAD",
+    "paper_title": "DepthBenchCAD: When Does More Auditing Yield More Reliable Conclusions?",
+    "environment_names": {
+      "A": "DepthBenchCAD-A",
+      "B": "DepthBenchCAD-B"
+    }
+  },
+  "master_seed": 20270901,
+  "main_budget": 1024,
+  "budgets": [
+    512,
+    1024,
+    2048
+  ],
+  "template_cost": 2,
+  "edit_cost": 1,
+  "systems": {
+    "S1": {
+      "model": "GPT-4.1 mini",
+      "interface": "CadQuery program"
+    },
+    "S2": {
+      "model": "GPT-5.5",
+      "interface": "CadQuery program"
+    },
+    "S3": {
+      "model": "Gemini 2.5 Flash",
+      "interface": "CadQuery program"
+    },
+    "S4": {
+      "model": "Gemini 3.1 Pro",
+      "interface": "CadQuery program"
+    },
+    "S5": {
+      "model": "Claude Sonnet 4.6",
+      "interface": "CadQuery program"
+    }
+  },
+  "generation_costs": {
+    "A": {
+      "S1": 1,
+      "S2": 3,
+      "S3": 8,
+      "S4": 16,
+      "S5": 32
+    },
+    "B": {
+      "S1": 2,
+      "S2": 6,
+      "S3": 16,
+      "S4": 32,
+      "S5": 64
+    }
+  },
+  "environments": {
+    "A": {
+      "templates": 72,
+      "families": 8,
+      "calibration": 24,
+      "test": 48,
+      "generations": 5,
+      "states": 16,
+      "name": "DepthBenchCAD-A"
+    },
+    "B": {
+      "templates": 48,
+      "families": 6,
+      "calibration": 12,
+      "test": 36,
+      "generations": 4,
+      "states": 16,
+      "name": "DepthBenchCAD-B"
+    }
+  },
+  "timeouts_seconds": {
+    "generation": 180,
+    "initial_build": 60,
+    "edit": 30
+  },
+  "execution": {
+    "os": "Ubuntu 22.04",
+    "python": "3.11",
+    "cadquery": "2.5.x",
+    "occt": "7.8.x",
+    "vcpus": 16,
+    "memory_gb": 64,
+    "concurrency": 1,
+    "infrastructure_retries": 1,
+    "model_or_geometry_retries": 0
+  },
+  "edit_types": [
+    "local",
+    "boundary",
+    "linked",
+    "semantic"
+  ],
+  "fixed_audit_depths": [
+    1,
+    4,
+    8,
+    9,
+    10,
+    12,
+    16
+  ],
+  "prediction_transitions": [
+    [
+      4,
+      8
+    ],
+    [
+      8,
+      16
+    ]
+  ],
+  "interval_experiment": {
+    "environment": "A",
+    "q": 16,
+    "g": 3,
+    "k": 8,
+    "repeats": 5000
+  },
+  "expert_validation": {
+    "strata": [
+      "system",
+      "edit_type",
+      "automatic_label"
+    ],
+    "sample_per_nonempty_stratum": 20,
+    "nominal_sample_count": 800,
+    "experts": 2,
+    "adjudication": "consensus"
+  },
+  "bootstrap": {
+    "program_mse_repeats": 2000,
+    "interval_repeats": 5000
+  },
+  "cost_estimator": {
+    "primary": "trimmed_mean",
+    "trim_fraction": 0.1,
+    "sensitivity": [
+      "mean",
+      "median"
+    ]
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "source": "Numeric results transcribed from the supplied DepthBenchCAD manuscript",
+  "paper_title": "DepthBenchCAD: When Does More Auditing Yield More Reliable Conclusions?",
+  "main_budget": 1024,
+  "interval_coverage": {
+    "program_as_independent_mean_percent": 91.81,
+    "three_level_design_mean_percent": 95.26,
+    "S1": {
+      "program_as_independent_percent": 89.06,
+      "three_level_design_percent": 94.28
+    },
+    "S2": {
+      "program_as_independent_percent": 86.82,
+      "three_level_design_percent": 94.42
+    }
+  },
+  "table_3_environment_a_fixed_depth": {
+    "metric": "J = 1024 * model_level_MSE",
+    "systems": {
+      "S1": {
+        "k4": {
+          "q": 46,
+          "g": 4,
+          "J": 0.0973,
+          "program_MSE": 0.014291
+        },
+        "k8": {
+          "q": 48,
+          "g": 2,
+          "J": 0.1121,
+          "program_MSE": 0.004805
+        },
+        "k16": {
+          "q": 48,
+          "g": 1,
+          "J": 0.1635,
+          "program_MSE": 0.0
+        }
+      },
+      "S2": {
+        "k4": {
+          "q": 44,
+          "g": 3,
+          "J": 0.3048,
+          "program_MSE": 0.02612
+        },
+        "k8": {
+          "q": 42,
+          "g": 2,
+          "J": 0.3087,
+          "program_MSE": 0.008736
+        },
+        "k16": {
+          "q": 48,
+          "g": 1,
+          "J": 0.2989,
+          "program_MSE": 0.0
+        }
+      },
+      "S3": {
+        "k4": {
+          "q": 39,
+          "g": 2,
+          "J": 0.7171,
+          "program_MSE": 0.038312
+        },
+        "k8": {
+          "q": 48,
+          "g": 1,
+          "J": 0.6513,
+          "program_MSE": 0.012681
+        },
+        "k16": {
+          "q": 39,
+          "g": 1,
+          "J": 0.5053,
+          "program_MSE": 0.0
+        }
+      },
+      "S4": {
+        "k4": {
+          "q": 46,
+          "g": 1,
+          "J": 1.2878,
+          "program_MSE": 0.043882
+        },
+        "k8": {
+          "q": 39,
+          "g": 1,
+          "J": 0.7726,
+          "program_MSE": 0.014583
+        },
+        "k16": {
+          "q": 30,
+          "g": 1,
+          "J": 0.5379,
+          "program_MSE": 0.0
+        }
+      },
+      "S5": {
+        "k4": {
+          "q": 7,
+          "g": 4,
+          "J": 2.3954,
+          "program_MSE": 0.045918
+        },
+        "k8": {
+          "q": 24,
+          "g": 1,
+          "J": 1.3319,
+          "program_MSE": 0.015295
+        },
+        "k16": {
+          "q": 20,
+          "g": 1,
+          "J": 0.8374,
+          "program_MSE": 0.0
+        }
+      }
+    }
+  },
+  "benefit_direction_prediction": {
+    "environment_A_correct": 9,
+    "environment_A_total": 10,
+    "environment_A_only_error": {
+      "system": "S2",
+      "transition": "k4_to_k8",
+      "predicted_delta_J": -0.0121,
+      "observed_delta_J": 0.0039
+    },
+    "environment_A_mean_wrong_recommendation_loss": 0.000389,
+    "environment_B_correct": 10,
+    "environment_B_total": 10
+  },
+  "table_4_environment_a_candidate_allocations": {
+    "S1": {
+      "pooled": {
+        "q": 48,
+        "g": 2,
+        "k": 7,
+        "J": 0.1266
+      },
+      "system": {
+        "q": 48,
+        "g": 3,
+        "k": 4,
+        "J": 0.1288
+      },
+      "stratified": {
+        "q": 48,
+        "g": 2,
+        "k": 8,
+        "J": 0.1103
+      }
+    },
+    "S2": {
+      "pooled": {
+        "q": 46,
+        "g": 2,
+        "k": 7,
+        "J": 0.2645
+      },
+      "system": {
+        "q": 39,
+        "g": 3,
+        "k": 5,
+        "J": 0.3492
+      },
+      "stratified": {
+        "q": 44,
+        "g": 3,
+        "k": 4,
+        "J": 0.3
+      }
+    },
+    "S3": {
+      "pooled": {
+        "q": 32,
+        "g": 2,
+        "k": 7,
+        "J": 0.5607
+      },
+      "system": {
+        "q": 30,
+        "g": 2,
+        "k": 8,
+        "J": 0.5471
+      },
+      "stratified": {
+        "q": 32,
+        "g": 2,
+        "k": 7,
+        "J": 0.5818
+      }
+    },
+    "S4": {
+      "pooled": {
+        "q": 21,
+        "g": 2,
+        "k": 7,
+        "J": 0.8427
+      },
+      "system": {
+        "q": 14,
+        "g": 3,
+        "k": 7,
+        "J": 0.8738
+      },
+      "stratified": {
+        "q": 23,
+        "g": 2,
+        "k": 5,
+        "J": 1.1128
+      }
+    },
+    "S5": {
+      "pooled": {
+        "q": 12,
+        "g": 2,
+        "k": 7,
+        "J": 1.5771
+      },
+      "system": {
+        "q": 22,
+        "g": 1,
+        "k": 11,
+        "J": 1.0749
+      },
+      "stratified": {
+        "q": 22,
+        "g": 1,
+        "k": 11,
+        "J": 1.0882
+      }
+    }
+  },
+  "table_5_calibration_costs": {
+    "unit": "normalized edit cost",
+    "S1": {
+      "full": 2088,
+      "small": 288,
+      "small_over_formal_percent": 28.1
+    },
+    "S2": {
+      "full": 2328,
+      "small": 320,
+      "small_over_formal_percent": 31.3
+    },
+    "S3": {
+      "full": 2928,
+      "small": 400,
+      "small_over_formal_percent": 39.1
+    },
+    "S4": {
+      "full": 3888,
+      "small": 528,
+      "small_over_formal_percent": 51.6
+    },
+    "S5": {
+      "full": 5808,
+      "small": 784,
+      "small_over_formal_percent": 76.6
+    }
+  },
+  "table_6_split_stability": {
+    "S1": {
+      "random_robust_coverage_percent": 45.0,
+      "random_regret_median": 1.059,
+      "random_regret_p90": 1.444,
+      "leave_family_out_robust_coverage_percent": 25.0,
+      "leave_family_out_regret_median": 1.286,
+      "leave_family_out_regret_p90": 1.709
+    },
+    "S2": {
+      "random_robust_coverage_percent": 65.0,
+      "random_regret_median": 1.028,
+      "random_regret_p90": 1.374,
+      "leave_family_out_robust_coverage_percent": 12.5,
+      "leave_family_out_regret_median": 1.39,
+      "leave_family_out_regret_p90": 1.608
+    },
+    "S3": {
+      "random_robust_coverage_percent": 62.5,
+      "random_regret_median": 1.042,
+      "random_regret_p90": 1.161,
+      "leave_family_out_robust_coverage_percent": 75.0,
+      "leave_family_out_regret_median": 1.0,
+      "leave_family_out_regret_p90": 1.215
+    },
+    "S4": {
+      "random_robust_coverage_percent": 57.5,
+      "random_regret_median": 1.038,
+      "random_regret_p90": 1.347,
+      "leave_family_out_robust_coverage_percent": 37.5,
+      "leave_family_out_regret_median": 1.083,
+      "leave_family_out_regret_p90": 1.21
+    },
+    "S5": {
+      "random_robust_coverage_percent": 72.5,
+      "random_regret_median": 1.033,
+      "random_regret_p90": 1.229,
+      "leave_family_out_robust_coverage_percent": 62.5,
+      "leave_family_out_regret_median": 1.029,
+      "leave_family_out_regret_p90": 1.471
+    }
+  },
+  "table_7_environment_b_efficiency": {
+    "fixed_k4": {
+      "mean_J": 0.974,
+      "mean_k": 4.0,
+      "relative_to_best_percent": 26.8
+    },
+    "fixed_k8": {
+      "mean_J": 0.828,
+      "mean_k": 8.0,
+      "relative_to_best_percent": 7.9
+    },
+    "fixed_k9": {
+      "mean_J": 0.782,
+      "mean_k": 9.0,
+      "relative_to_best_percent": 1.8
+    },
+    "fixed_k10": {
+      "mean_J": 0.768,
+      "mean_k": 10.0,
+      "relative_to_best_percent": 0.0
+    },
+    "fixed_k12": {
+      "mean_J": 0.833,
+      "mean_k": 12.0,
+      "relative_to_best_percent": 8.5
+    },
+    "fixed_k16": {
+      "mean_J": 0.855,
+      "mean_k": 16.0,
+      "relative_to_best_percent": 11.3
+    },
+    "cross_system_pooled": {
+      "mean_J": 0.831,
+      "mean_k": 7.0,
+      "relative_to_best_percent": 8.2
+    },
+    "leave_one_system_out": {
+      "mean_J": 0.786,
+      "mean_k": 11.6,
+      "relative_to_best_percent": 2.3
+    },
+    "full_system_calibration": {
+      "mean_J": 0.807,
+      "mean_k": 10.2,
+      "relative_to_best_percent": 5.0
+    },
+    "small_calibration_stratified": {
+      "mean_J": 0.831,
+      "mean_k": 10.6,
+      "relative_to_best_percent": 8.2
+    }
+  },
+  "table_8_automatic_and_expert_risk": {
+    "S1": {
+      "expert": 0.0911,
+      "automatic": 0.0958
+    },
+    "S2": {
+      "expert": 0.2188,
+      "automatic": 0.2151
+    },
+    "S3": {
+      "expert": 0.3258,
+      "automatic": 0.3188
+    },
+    "S4": {
+      "expert": 0.4052,
+      "automatic": 0.3862
+    },
+    "S5": {
+      "expert": 0.482,
+      "automatic": 0.4464
+    }
+  },
+  "table_9_pairwise_decision_accuracy_percent": {
+    "fixed_k8": {
+      "512": 95.8,
+      "1024": 97.9,
+      "2048": 99.7
+    },
+    "fixed_k9": {
+      "512": 95.8,
+      "1024": 97.7,
+      "2048": 99.6
+    },
+    "fixed_k10": {
+      "512": 95.0,
+      "1024": 98.0,
+      "2048": 99.7
+    },
+    "paired_system": {
+      "512": 95.2,
+      "1024": 98.2,
+      "2048": 99.6
+    },
+    "paired_system_stratified": {
+      "512": 95.9,
+      "1024": 98.4,
+      "2048": 99.6
+    }
+  }
+}
